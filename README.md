@@ -1,39 +1,14 @@
 # personal website
 
-Personal website and blog hosted on GitHub Pages with custom domain.
+Static website hosted on GitHub Pages at `jordy.space`
+
+## Key Features
+
+- **Notion API Integration**: Blog posts automatically fetched from Notion via `scripts/fetch-blog-content.js` and updated every 6 hours through GitHub Actions
+- **Minimalist Styling**: Custom CSS with dark mode support, using Gidole font with clean typography
+- **Directory-based routing**: Clean URLs with `index.html` in subdirectories (`/about/`, `/blog/`)
 
 ## Structure
-
-This is a static HTML website with a clean, minimalist design featuring:
-
-### Pages
-- **Homepage** (`/`) - Landing page with profile and about section
-- **About** (`/about/`) - Dedicated about page (same content as homepage)
-- **Blog** (`/blog/`) - Blog index and individual post views
-
-### Key Features
-
-**Clean URL Structure**
-- Directory-based routing with `index.html` files for clean URLs (no `.html` extensions)
-- Custom domain: `jordy.space`
-- Absolute paths (`/style.css`, `/images/`, etc.) for consistent asset loading across all pages
-
-**Notion-Powered Blog**
-- Blog content is dynamically fetched from Notion API via `scripts/fetch-blog-content.js`
-- Posts are stored in `blog-content.json` and rendered client-side via `blog-notion.js`
-- Images are downloaded from Notion and stored in `/images/` directory
-- Automatic updates every 6 hours via GitHub Actions workflow
-
-**GitHub Actions Automation**
-- `.github/workflows/update-blog.yml` - Fetches latest blog posts from Notion and commits changes
-- Requires `NOTION_API_KEY` secret in repository settings
-
-**Responsive Design**
-- Mobile-first approach with hamburger menu on small screens
-- Custom styling in `style.css` with dark mode support
-- Minimalist typography using Gidole font with fallback to Latin Modern Roman
-
-### Directory Structure
 
 ```
 /
@@ -43,26 +18,15 @@ This is a static HTML website with a clean, minimalist design featuring:
 ├── blog/
 │   └── index.html          # Blog page
 ├── style.css               # Global styles
-├── menu.js                 # Mobile menu functionality
-├── blog-notion.js          # Blog rendering and navigation
-├── blog-content.json       # Blog posts data (auto-generated)
-├── images/                 # Blog post images (auto-generated)
-├── pics/                   # Profile and static images
+├── menu.js                 # Mobile menu
+├── blog-notion.js          # Blog rendering
+├── blog-content.json       # Blog data (auto-generated)
+├── images/                 # Blog images (auto-generated)
+├── pics/                   # Profile images
 ├── Fonts/                  # Custom fonts
 ├── scripts/
 │   └── fetch-blog-content.js  # Notion API integration
 ├── .github/workflows/
 │   └── update-blog.yml     # Automated blog updates
-├── CNAME                   # Custom domain configuration
-└── 404.html                # 404 error page
+└── CNAME                   # Custom domain
 ```
-
-## Deployment
-
-- **Hosting**: GitHub Pages (builds from `main` branch root)
-- **Custom Domain**: `jordy.space` (configured via DNS A records pointing to GitHub Pages IPs)
-- **SSL**: Automatic HTTPS via GitHub Pages
-
-## Local Development
-
-Simply open `index.html` in a browser. No build process required - it's pure HTML, CSS, and vanilla JavaScript.
