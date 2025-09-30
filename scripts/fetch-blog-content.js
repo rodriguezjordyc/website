@@ -8,7 +8,7 @@ const https = require('https'); // For downloading images
 const NOTION_API_KEY = process.env.NOTION_API_KEY || 'your-api-key-here';
 const DATABASE_ID = '24f79889bbb181c1a483dc5ddca87241';
 const IMAGES_DIR = path.join(__dirname, '..', 'images');
-const IMAGES_PUBLIC_PATH = '/images';
+const IMAGES_PUBLIC_PATH = 'images';
 
 // Fetch blog posts from Notion API
 async function fetchNotionPosts() {
