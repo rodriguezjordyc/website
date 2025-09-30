@@ -5,17 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting... - jordy rodriguez</title>
     <script>
-        // Handle GitHub Pages routing for /about and /thoughts
-        const path = window.location.pathname;
-
-        if (path.includes('/about')) {
-            window.location.href = '/website/index.html';
-        } else if (path.includes('/thoughts')) {
-            window.location.href = '/website/blog.html';
-        } else {
-            // Default to homepage
-            window.location.href = '/website/index.html';
-        }
+        // Redirect to homepage - directories will be handled automatically
+        window.location.href = '/';
     </script>
 </head>
 <body>
