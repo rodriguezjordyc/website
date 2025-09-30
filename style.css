@@ -199,14 +199,14 @@ nav ul {
     display: -ms-flexbox;
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     /* Fallback for gap */
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-right: 2rem;
+    margin-right: 1rem;
     list-style: none;
     border: none;
 }
