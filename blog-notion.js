@@ -9,7 +9,7 @@ window.addEventListener('error', function(e) {
             <div class="error-message">
                 <h2>Something Went Wrong</h2>
                 <p>We encountered an unexpected error. Please refresh the page to try again.</p>
-                <p><a href="/about">← Return to About</a></p>
+                <p><a href="index.html">← Return to About</a></p>
             </div>
         `;
     }
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="error-message">
                     <h2>Blog Initialization Failed</h2>
                     <p>Unable to initialize the blog system. Please refresh the page.</p>
-                    <p><a href="/about">← Return to About</a></p>
+                    <p><a href="index.html">← Return to About</a></p>
                 </div>
             `;
         }
@@ -58,7 +58,7 @@ async function fetchBlogPosts() {
             throw new Error('Fetch API not supported');
         }
 
-        const response = await fetch('/blog-content.json');
+        const response = await fetch('blog-content.json');
 
         if (!response.ok) {
             throw new Error(`Failed to load blog content: ${response.status} ${response.statusText}`);
@@ -86,7 +86,7 @@ async function fetchBlogPosts() {
                 <div class="error-message">
                     <h2>Blog Temporarily Unavailable</h2>
                     <p>We're having trouble loading the blog content. Please try refreshing the page or check back later.</p>
-                    <p><a href="/about">← Return to About</a></p>
+                    <p><a href="index.html">← Return to About</a></p>
                 </div>
             `;
         }
