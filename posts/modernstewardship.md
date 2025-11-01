@@ -49,6 +49,4 @@ My reflections won't be prescriptions for how we should live or use technology. 
 
 Modern Stewardship attempts to encourage a shift to building a resilient foundation that puts technology to work *for* you—helping you become someone who builds their house on the rock.
 
----
-
 * Scripture taken from the New King James Version. Copyright 1982 by Thomas Nelson. Used by permission. All rights reserved.

@@ -4,8 +4,6 @@ Published: September 2, 2025
 
 *I wrote this analysis last year while trying to understand the AI value chain. Publicly sharing notes I wrote for myself below:*
 
----
-
 I've been trying to understand the value chain that enables the commercial deployment of AI systems. The growing interest in AI from enterprises and consumers has been catalyzed by GenAI models from a select number of companies: OpenAI, Anthropic, Google, Meta, Microsoft.
 
 The rapid growth of AI adoption has mainly been centered around the suppliers of foundational models (e.g. GPT-4) and firms building domain-specific applications powered by foundational models (e.g. chatbots, virtual assistants). However, this overlooks the various stakeholders within the value chain that help train, fine-tune, integrate, deploy, and manage AI systems for the best end-user experience. The current state of AI deployment is reminiscent of the early days in IT services outsourcing.
@@ -16,8 +14,6 @@ Given the existing growth of LLMs and adjacent foundational models is a result o
 
 Below is a quick categorization of different areas in the value chain from upstream to downstream stages of AI development and deployment (this is the first attempt at organizing different literature, so it is subject to change). There is a unique space for domain-focused AI startups and AI infrastructure startups to create AI tools / services that are tailored to Latin American business practices and contextual consumer preferences. Additionally, there will soon be an interest in managing non-modular AI services and measuring the efficacy of systems.
 
----
-
 **AI Value Chain Categories (Upstream to Downstream)**
 
 | Data Providers | Companies collecting, aggregating, labelling, and selling data for model training |
@@ -26,8 +22,6 @@ Below is a quick categorization of different areas in the value chain from upstr
 | Domain-focused App Developers | Companies fine-tuning foundational models and applications for enterprise or consumer use-cases |
 | AI Infra Providers | Companies facilitating the deployment & management of AI / ML systems for model creators or enterprises |
 | End-user | Enterprises or consumers |
-
----
 
 **Value Chain Complexity**
 
