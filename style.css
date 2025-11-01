@@ -209,24 +209,11 @@ main {
     padding: 0.25rem 0;
     transition: var(--transition);
     cursor: pointer;
-    position: relative;
 }
 
 .post-link:hover {
-    opacity: 0.8;
-}
-
-.post-link::before {
-    content: '→';
-    position: absolute;
-    left: -1.5rem;
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.post-link:hover::before {
-    opacity: 1;
-    left: -1.25rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 
