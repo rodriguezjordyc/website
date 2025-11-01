@@ -4,29 +4,37 @@ Static website hosted on GitHub Pages at `jordy.space`
 
 ## Key Features
 
-- **Notion API Integration**: Blog posts automatically fetched from Notion via `scripts/fetch-blog-content.js` and updated every 6 hours through GitHub Actions
-- **Minimalist Styling**: Custom CSS with dark mode support, using Gidole font with clean typography
-- **Directory-based routing**: Clean URLs with `index.html` in subdirectories (`/about/`, `/blog/`)
+- **Single-Page Design**: Minimalist layout with hero, tagline, and writing sections on one page
+- **Markdown Blog Posts**: Write in Notion, export as markdown, and publish with simple file upload
+- **Dark/Light Mode**: Theme toggle with localStorage persistence, dark mode default
+- **Image Lightbox**: Click blog post images to view full-size in a clean overlay
+- **Custom Typography**: Gidole font with clean, minimal aesthetic
 
 ## Structure
 
 ```
 /
-├── index.html              # Homepage
-├── about/
-│   └── index.html          # About page
-├── blog/
-│   └── index.html          # Blog page
-├── style.css               # Global styles
-├── menu.js                 # Mobile menu
-├── blog-notion.js          # Blog rendering
-├── blog-content.json       # Blog data (auto-generated)
-├── images/                 # Blog images (auto-generated)
+├── index.html              # Single-page site
+├── style.css               # Dark/light mode styles
+├── blog.js                 # Blog rendering & theme toggle
+├── posts/                  # Markdown blog posts
+│   ├── ailiteracy.md
+│   ├── aivaluechain.md
+│   ├── modernstewardship.md
+│   └── technicalailandscape/
+│       └── *.md            # Posts with images/assets
 ├── pics/                   # Profile images
-├── Fonts/                  # Custom fonts
-├── scripts/
-│   └── fetch-blog-content.js  # Notion API integration
-├── .github/workflows/
-│   └── update-blog.yml     # Automated blog updates
+├── Fonts/                  # Custom Gidole font
+├── PUBLISHING.md           # Publishing workflow guide
 └── CNAME                   # Custom domain
 ```
+
+## Publishing
+
+1. Write in Notion
+2. Export as Markdown & CSV
+3. Add to `/posts/` directory
+4. Update `POST_FILES` in `blog.js`
+5. Commit and push
+
+See `PUBLISHING.md` for detailed instructions.

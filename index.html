@@ -4,49 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jordy rodriguez</title>
+    <meta name="description" content="Passionate about expanding technology's positive impact and solving the underlying problems that limit how we experience and benefit from it.">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="pics/jr.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="pics/jr.jpg">
     <link rel="apple-touch-icon" href="pics/jr.jpg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman&display=swap">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <noscript>
-        <style>
-            .loading { display: none !important; }
-            .error-message { display: block !important; }
-        </style>
-    </noscript>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="name"><a href="/">jordy rodriguez</a></div>
-            <div class="menu-toggle">☰</div>
-            <nav>
-                <ul>
-                    <li><a href="/about/">about</a></li>
-                    <li><a href="/blog/">blog</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="menu-overlay"></div>
+    <!-- Theme Toggle - Fixed Top Right -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
 
     <main>
-        <section id="about">
-            <p>Passionate about expanding technology's positive impact and solving the underlying problems that limit how we experience and benefit from it.</p>
-            <p>Weightlifter when it's cold, runner when it's warm. Always have time to talk about my faith, Real Madrid, and philosophy.</p>
-            <p>Reach out: jordy@alumni.harvard.edu</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-name">Jordy Rodriguez</h1>
+            <p class="hero-tagline">Energized by solving the underlying problems that limit how we experience and benefit from products we love. Weightlifter when it's cold, runner when it's warm. Always have time to talk about my faith, Real Madrid, and philosophy.</p>
         </section>
+
+        <!-- Writing Section -->
+        <section class="writing">
+            <h2 class="section-header">Writing</h2>
+            <div id="posts-list" class="posts-list">
+                <div class="loading">Loading posts...</div>
+            </div>
+        </section>
+
+        <!-- Blog Post View (Hidden by default) -->
+        <article id="post-view" class="post-view" style="display: none;">
+            <button class="back-button" onclick="showPostsList()">← Back</button>
+            <div id="post-content" class="post-content"></div>
+        </article>
     </main>
-    
+
+    <!-- Footer -->
     <footer>
-        <div class="contact-links">
-            <a href="https://x.com/jordyrodriguezc" class="contact-link" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://github.com/rodriguezjordyc" class="contact-link" target="_blank" rel="noopener noreferrer">github</a>
+        <div class="contact">
+            <button class="copy-email-btn" onclick="copyEmail()" aria-label="Copy email to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+            <a href="mailto:jordy@alumni.harvard.edu" class="email">jordy@alumni.harvard.edu</a>
         </div>
     </footer>
-    <script src="menu.js" onerror="console.warn('Menu script failed to load')"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js"></script>
+    <script src="blog.js"></script>
 </body>
 </html>
