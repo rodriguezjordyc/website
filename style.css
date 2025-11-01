@@ -58,8 +58,8 @@ body {
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
-    top: 2rem;
-    right: 5%;
+    top: 1.5rem;
+    right: 1.5rem;
     z-index: 1000;
     background: none;
     border: none;
@@ -77,16 +77,10 @@ body {
     opacity: 0.7;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .theme-toggle {
-        top: 3rem;
-        right: 7.5%;
-    }
-}
-
-@media (min-width: 1000px) {
-    .theme-toggle {
-        right: calc((100vw - 700px) / 2);
+        top: 1rem;
+        right: 1rem;
     }
 }
 
