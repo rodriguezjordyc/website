@@ -16,13 +16,13 @@ themeToggle.addEventListener('click', () => {
 function copyEmail() {
     const email = 'jordy@alumni.harvard.edu';
     navigator.clipboard.writeText(email).then(() => {
-        // Visual feedback - change button color briefly
+        // Visual feedback - change opacity briefly
         const btn = document.querySelector('.copy-email-btn');
-        const originalColor = btn.style.color;
-        btn.style.color = 'var(--accent)';
+        const originalOpacity = btn.style.opacity;
+        btn.style.opacity = '0.5';
 
         setTimeout(() => {
-            btn.style.color = originalColor;
+            btn.style.opacity = originalOpacity;
         }, 500);
     }).catch(err => {
         console.error('Failed to copy email:', err);
