@@ -162,6 +162,21 @@ main {
     margin-bottom: 6rem;
 }
 
+/* Contact Section */
+.contact-section {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+.reach-out {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
 .section-header {
     font-size: 1.75rem;
     font-weight: 300;
@@ -358,19 +373,16 @@ main {
 
 .post-content table {
     width: 100%;
-    max-width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
     font-size: 1rem;
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    table-layout: auto;
 }
 
-.post-content table tbody,
-.post-content table thead {
-    display: table;
-    width: 100%;
+.post-content .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 2rem 0;
 }
 
 .post-content table th,
@@ -378,7 +390,6 @@ main {
     padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
-    word-wrap: break-word;
 }
 
 .post-content table th {

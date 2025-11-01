@@ -256,6 +256,15 @@ function showPost(index) {
 
     postContentElement.innerHTML = contentHTML;
 
+    // Wrap tables in a scrollable wrapper
+    const tables = postContentElement.querySelectorAll('table');
+    tables.forEach(table => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    });
+
     // Add click handlers to all images in the post
     const images = postContentElement.querySelectorAll('img');
     images.forEach(img => {
@@ -265,8 +274,10 @@ function showPost(index) {
     });
 
     // Show post view, hide other sections
+    const contactSection = document.querySelector('.contact-section');
     writingSection.style.display = 'none';
     heroSection.style.display = 'none';
+    contactSection.style.display = 'none';
     postView.style.display = 'block';
 
     // Scroll to top
@@ -282,10 +293,12 @@ function showPostsList() {
     const postView = document.getElementById('post-view');
     const writingSection = document.querySelector('.writing');
     const heroSection = document.querySelector('.hero');
+    const contactSection = document.querySelector('.contact-section');
 
     // Show all sections, hide post view
     heroSection.style.display = 'flex';
     writingSection.style.display = 'block';
+    contactSection.style.display = 'block';
     postView.style.display = 'none';
 
     // Clear URL hash
