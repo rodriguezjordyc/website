@@ -376,7 +376,7 @@ main {
 .post-content table td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--text-primary);
 }
 
 .post-content table th {
@@ -390,7 +390,7 @@ main {
 
 .post-content hr {
     border: none;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--text-primary);
     margin: 3rem 0;
 }
 
