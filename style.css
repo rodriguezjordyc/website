@@ -43,12 +43,12 @@ html {
 }
 
 body {
-    font-family: 'Gidolinya', 'Latin Modern Roman', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', Courier, monospace;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.7;
     letter-spacing: 0.005em;
-    font-weight: 200;
+    font-weight: 300;
     transition: var(--transition);
     min-height: 100vh;
     display: flex;
