@@ -168,6 +168,11 @@ main {
     margin-bottom: 6rem;
 }
 
+/* Currently Reading Section */
+.currently-reading {
+    margin-bottom: 6rem;
+}
+
 /* Contact Section */
 .contact-section {
     margin-top: 1rem;
@@ -218,6 +223,31 @@ main {
 }
 
 .post-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Reading List (matching Posts List styling) */
+.reading-list {
+    max-width: 600px;
+    margin: 0;
+}
+
+.reading-item {
+    margin-bottom: 0.25rem;
+}
+
+.reading-link {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.25rem 0;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.reading-link:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
