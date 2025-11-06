@@ -118,8 +118,7 @@ Note: The "Published:" line is automatically removed from rendered content but t
 **Structure:**
 - Section header: "Currently Reading"
 - List of reading items with hyperlinks to source pages
-- Book/magazine titles are italicized using `<em>` tags
-- Format: `<em>Title: Subtitle</em> by Author` or `<em>Title</em>` for magazines
+- Format: `Title: Subtitle by Author` or `Title` for magazines
 
 **Adding/Updating Reading List:**
 
@@ -130,14 +129,14 @@ Note: The "Published:" line is automatically removed from rendered content but t
 
 <div class="reading-item">
     <a href="[URL]" target="_blank" rel="noopener noreferrer" class="reading-link">
-        <em>Book Title: Subtitle</em> by Author Name
+        Book Title: Subtitle by Author Name
     </a>
 </div>
 
 # For magazines without author:
 <div class="reading-item">
     <a href="[URL]" target="_blank" rel="noopener noreferrer" class="reading-link">
-        <em>Magazine Name: Issue Title</em>
+        Magazine Name: Issue Title
     </a>
 </div>
 
@@ -148,10 +147,9 @@ git push
 ```
 
 **Formatting Guidelines:**
-- **Always italicize** the full title (including subtitle) using `<em>` tags
 - Use formal/complete book title from the source link (e.g., "Click Here: The Art and Science of Digital Marketing and Advertising" not just "Click Here")
 - Include subtitle with colon separator if present
-- Add "by [Author Name]" after the closing `</em>` tag for books
+- Add "by [Author Name]" after the title for books
 - Magazines typically don't need author attribution
 - Links open in new tab (`target="_blank"`)
 - Use `rel="noopener noreferrer"` for security
@@ -275,7 +273,6 @@ Inspired by minimalist design:
 **Currently Reading Section:**
 - "Currently Reading" header
 - List of books/articles/magazines with hyperlinks
-- Titles are italicized using `<em>` tags
-- Format: *Title: Subtitle* by Author
+- Format: Title: Subtitle by Author
 - 3rem spacing from Writing section (consistent with other sections)
 - Minimal spacing between entries (0.25rem)
