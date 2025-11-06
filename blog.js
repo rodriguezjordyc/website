@@ -274,9 +274,11 @@ function showPost(index) {
 
     // Show post view, hide other sections
     const contactSection = document.querySelector('.contact-section');
+    const currentlyReadingSection = document.querySelector('.currently-reading');
     writingSection.style.display = 'none';
     heroSection.style.display = 'none';
     contactSection.style.display = 'none';
+    currentlyReadingSection.style.display = 'none';
     postView.style.display = 'block';
 
     // Scroll to top
@@ -293,11 +295,13 @@ function showPostsList() {
     const writingSection = document.querySelector('.writing');
     const heroSection = document.querySelector('.hero');
     const contactSection = document.querySelector('.contact-section');
+    const currentlyReadingSection = document.querySelector('.currently-reading');
 
     // Show all sections, hide post view
     heroSection.style.display = 'flex';
     writingSection.style.display = 'block';
     contactSection.style.display = 'block';
+    currentlyReadingSection.style.display = 'block';
     postView.style.display = 'none';
 
     // Clear URL hash
