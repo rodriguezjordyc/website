@@ -127,7 +127,7 @@ main {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    padding: 3rem 0 2rem;
+    padding: 3rem 0 1rem;
     margin: 0;
 }
 
@@ -165,18 +165,18 @@ main {
 
 /* Writing Section */
 .writing {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 /* Currently Reading Section */
 .currently-reading {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 /* Contact Section */
 .contact-section {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .reach-out {
