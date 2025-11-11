@@ -34,7 +34,6 @@ let allPosts = [];
 
 // Post file paths (update this when adding new posts)
 const POST_FILES = [
-    'ailiteracy.md',
     'aivaluechain.md',
     'Complexity Science in Football.md',
     'technicalailandscape/Technical AI Landscape 27b79889bbb1815d9432ec68ae21dac5.md'
