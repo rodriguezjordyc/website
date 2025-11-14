@@ -14,7 +14,7 @@ themeToggle.addEventListener('click', () => {
 
 // Copy Email to Clipboard
 function copyEmail() {
-    const email = 'jordy@alumni.harvard.edu';
+    const email = 'rodriguezjordyc@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
         // Visual feedback - change opacity briefly
         const btn = document.querySelector('.copy-email-btn');
