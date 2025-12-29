@@ -3,128 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy C. Rodriguez</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        section h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .book-entry {
-            margin: 1rem 0;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            border-left: 4px solid #667eea;
-            border-radius: 4px;
-        }
-        
-        .book-entry h3 {
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        
-        .book-entry p {
-            color: #666;
-            margin: 0.25rem 0;
-        }
-        
-        a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #666;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <title>jordy rodriguez</title>
+    <meta name="description" content="Passionate about expanding technology's positive impact and solving the underlying problems that limit how we experience and benefit from it.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="pics/jr.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="pics/jr.jpg">
+    <link rel="apple-touch-icon" href="pics/jr.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Jordy C. Rodriguez</h1>
-        <p>Welcome to my personal website</p>
-    </header>
-    
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I'm Jordy C. Rodriguez. This is my personal website where I share my thoughts, projects, and interests.</p>
+    <!-- Theme Toggle - Fixed Top Right -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-name">Jordy Rodriguez</h1>
+            <p class="hero-tagline">Passionate about solving the underlying problems that limit how we experience and benefit from products we love. Weightlifter when it's cold, runner when it's warm. Always have time to talk about my faith, Real Madrid, and philosophy.</p>
         </section>
-        
-        <section>
-            <h2>Currently Reading</h2>
-            <div class="book-entry">
-                <h3>Click Here</h3>
-                <p>An insightful exploration of digital culture and interaction.</p>
-                <p><a href="#">Learn more</a></p>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <p class="reach-out">
+                Reach out:
+                <a href="mailto:jordy@alumni.harvard.edu" class="email">jordy@alumni.harvard.edu</a>
+                <button class="copy-email-btn" onclick="copyEmail()" aria-label="Copy email to clipboard">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </p>
+        </section>
+
+        <!-- Writing Section -->
+        <section class="writing">
+            <h2 class="section-header">Writing</h2>
+            <div id="posts-list" class="posts-list">
+                <div class="loading">Loading posts...</div>
             </div>
-            <div class="book-entry">
-                <h3>New Philosopher Magazine</h3>
-                <p>Thought-provoking articles on contemporary philosophy and ideas.</p>
-                <p><a href="#">Learn more</a></p>
+        </section>
+
+        <!-- Currently Reading Section -->
+        <section class="currently-reading">
+            <h2 class="section-header">Currently Reading</h2>
+            <div class="reading-list">
+                <div class="reading-item">
+                    <a href="https://www.barnesandnoble.com/w/click-here-alex-schultz/1147083263" target="_blank" rel="noopener noreferrer" class="reading-link">Click Here: The Art and Science of Digital Marketing and Advertising by Alex Schultz</a>
+                </div>
+                <div class="reading-item">
+                    <a href="https://www.newphilosopher.com/" target="_blank" rel="noopener noreferrer" class="reading-link">Observation, New Philosopher Magazine</a>
+                </div>
             </div>
         </section>
-        
-        <section>
-            <h2>Projects</h2>
-            <p>Check back soon for updates on my latest projects!</p>
-        </section>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Jordy C. Rodriguez. All rights reserved.</p>
-    </footer>
+
+        <!-- Blog Post View (Hidden by default) -->
+        <article id="post-view" class="post-view" style="display: none;">
+            <button class="back-button" onclick="showPostsList()">← Back</button>
+            <div id="post-content" class="post-content"></div>
+        </article>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js"></script>
+    <script src="blog.js"></script>
 </body>
 </html>
