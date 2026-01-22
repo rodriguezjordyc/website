@@ -36,6 +36,7 @@ let allPosts = [];
 const POST_FILES = [
     'aivaluechain.md',
     'Complexity Science in Football.md',
+    'Ed by LAUSD.md',
     'technicalailandscape/Technical AI Landscape 27b79889bbb1815d9432ec68ae21dac5.md'
 ];
 
@@ -53,10 +54,11 @@ function parsePostMetadata(markdown, filename) {
         }
     }
 
-    // Extract published date
+    // Extract published date (supports both "Date:" and "Published:" formats)
     for (let i = 0; i < Math.min(15, lines.length); i++) {
-        if (lines[i].toLowerCase().includes('published:')) {
-            publishedDate = lines[i].replace(/published:/i, '').trim();
+        const line = lines[i].toLowerCase();
+        if (line.includes('published:') || line.includes('date:')) {
+            publishedDate = lines[i].replace(/published:|date:/i, '').trim();
             break;
         }
     }
@@ -230,8 +232,8 @@ function showPost(index) {
         mangle: false
     });
 
-    // Remove "Published:" line from markdown content
-    let cleanedMarkdown = post.markdown.replace(/^Published:.*$/mi, '').trim();
+    // Remove "Published:" or "Date:" line from markdown content
+    let cleanedMarkdown = post.markdown.replace(/^(Published|Date):.*$/mi, '').trim();
 
     // Parse markdown to HTML
     let html = marked.parse(cleanedMarkdown);
