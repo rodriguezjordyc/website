@@ -6,11 +6,7 @@ Date: January 22, 2026
 
 I recently learned about Ed, a defunct AI project led by Superintendent Alberto Carvalho in the Los Angeles Unified School District (LAUSD) through a partnership with AllHere, a former AI company. Ed’s failure was especially disappointing to me because I grew up attending LAUSD schools from K-8; I only attended in a charter high school because my mom believed I’d have a better chance at graduating and going to college if I attended a charter school instead of the local public high school. Not every family has this option, so I am a huge advocate for initiatives that improve outcomes for students in public schools and am a strong believer that technology is the most effective way to achieve this at scale—particularly in large urban districts like LAUSD that serves ~500K students and rural, distant districts like Sheridan County Schools serving ~4,000 students.  
 
-While Ed has become a popular argument against AI in public schools, any technology would have failed under LAUSD’s vision (absent the failures by AllHere CEO who was later charged with fraud). After learning about this project, I wanted to take time to write about three things:
-
-1. Ed’s objectives and capabilities
-2. Alternative views to technology deployment in education
-3. Example of effective edtech deployment
+While Ed has become a popular argument against AI in public schools, any technology would have failed under LAUSD’s vision (absent the failures by AllHere CEO who was later charged with fraud). After learning about this project, I wanted to take time to write about three things: Ed's objectives, alternative views to technology deployment in education, example of effective edtech deployment.
 
 ## Ed
 
