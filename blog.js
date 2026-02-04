@@ -121,6 +121,8 @@ async function loadAllPosts() {
         const posts = await Promise.all(POST_FILES.map(loadPost));
         allPosts = posts.filter(p => p !== null);
 
+        console.log(`Loaded ${allPosts.length} posts:`, allPosts.map(p => p.title));
+
         // Sort by date (newest first)
         allPosts.sort((a, b) => b.rawDate - a.rawDate);
 
@@ -155,7 +157,13 @@ function renderPostsList() {
     postLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             const index = parseInt(link.getAttribute('data-post-index'), 10);
+            if (isNaN(index)) {
+                console.error('Invalid post index:', link.getAttribute('data-post-index'));
+                return;
+            }
+            console.log('Showing post at index:', index, allPosts[index]?.title);
             showPost(index);
         });
     });
@@ -227,77 +235,98 @@ function closeLightbox() {
 // Show a specific post
 function showPost(index) {
     const post = allPosts[index];
-    if (!post) return;
+    if (!post) {
+        console.error('Post not found at index:', index);
+        return;
+    }
 
     const postView = document.getElementById('post-view');
     const writingSection = document.querySelector('.writing');
     const heroSection = document.querySelector('.hero');
     const postContentElement = document.getElementById('post-content');
-
-    // Configure marked.js options
-    marked.setOptions({
-        breaks: true,
-        gfm: true,
-        headerIds: true,
-        mangle: false
-    });
-
-    // Remove "Published:" or "Date:" line from markdown content
-    let cleanedMarkdown = post.markdown.replace(/^(Published|Date):.*$/mi, '').trim();
-
-    // Parse markdown to HTML
-    let html = marked.parse(cleanedMarkdown);
-
-    // Handle relative image paths for folder-based posts
-    if (post.filepath.includes('/')) {
-        const basePath = post.filepath.substring(0, post.filepath.lastIndexOf('/'));
-        html = html.replace(
-            /src="(?!http|\/)/g,
-            `src="posts/${basePath}/`
-        );
-    }
-
-    // Add published date if available
-    let contentHTML = '';
-    if (post.publishedDate) {
-        contentHTML = `<div class="published-date">${post.publishedDate}</div>`;
-    }
-    contentHTML += html;
-
-    postContentElement.innerHTML = contentHTML;
-
-    // Wrap tables in a scrollable wrapper
-    const tables = postContentElement.querySelectorAll('table');
-    tables.forEach(table => {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'table-wrapper';
-        table.parentNode.insertBefore(wrapper, table);
-        wrapper.appendChild(table);
-    });
-
-    // Add click handlers to all images in the post
-    const images = postContentElement.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            openLightbox(img.src, img.alt);
-        });
-    });
-
-    // Show post view, hide other sections
     const contactSection = document.querySelector('.contact-section');
     const currentlyReadingSection = document.querySelector('.currently-reading');
-    writingSection.style.display = 'none';
-    heroSection.style.display = 'none';
-    contactSection.style.display = 'none';
-    currentlyReadingSection.style.display = 'none';
-    postView.style.display = 'block';
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!postView || !postContentElement) {
+        console.error('Required elements not found');
+        return;
+    }
 
-    // Update URL hash
-    const slug = post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    window.location.hash = slug;
+    // Check if marked is available
+    if (typeof marked === 'undefined') {
+        console.error('marked.js library not loaded');
+        postContentElement.innerHTML = '<div class="loading">Error: Markdown parser not loaded. Please refresh the page.</div>';
+        return;
+    }
+
+    try {
+        // Configure marked.js options
+        marked.setOptions({
+            breaks: true,
+            gfm: true,
+            headerIds: true,
+            mangle: false
+        });
+
+        // Remove "Published:" or "Date:" line from markdown content
+        let cleanedMarkdown = post.markdown.replace(/^(Published|Date):.*$/mi, '').trim();
+
+        // Parse markdown to HTML
+        let html = marked.parse(cleanedMarkdown);
+
+        // Handle relative image paths for folder-based posts
+        if (post.filepath.includes('/')) {
+            const basePath = post.filepath.substring(0, post.filepath.lastIndexOf('/'));
+            html = html.replace(
+                /src="(?!http|\/)/g,
+                `src="posts/${basePath}/`
+            );
+        }
+
+        // Add published date if available
+        let contentHTML = '';
+        if (post.publishedDate) {
+            contentHTML = `<div class="published-date">${post.publishedDate}</div>`;
+        }
+        contentHTML += html;
+
+        postContentElement.innerHTML = contentHTML;
+
+        // Wrap tables in a scrollable wrapper
+        const tables = postContentElement.querySelectorAll('table');
+        tables.forEach(table => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        });
+
+        // Add click handlers to all images in the post
+        const images = postContentElement.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                openLightbox(img.src, img.alt);
+            });
+        });
+
+        // Show post view, hide other sections (with null checks)
+        if (writingSection) writingSection.style.display = 'none';
+        if (heroSection) heroSection.style.display = 'none';
+        if (contactSection) contactSection.style.display = 'none';
+        if (currentlyReadingSection) currentlyReadingSection.style.display = 'none';
+        postView.classList.remove('hidden');
+        postView.style.display = 'block';
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Update URL hash
+        const slug = post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        window.location.hash = slug;
+    } catch (error) {
+        console.error('Error displaying post:', error);
+        postContentElement.innerHTML = '<div class="loading">Error loading post. Please try again.</div>';
+    }
 }
 
 // Show posts list
@@ -308,18 +337,23 @@ function showPostsList() {
     const contactSection = document.querySelector('.contact-section');
     const currentlyReadingSection = document.querySelector('.currently-reading');
 
-    // Show all sections, hide post view
-    heroSection.style.display = 'flex';
-    writingSection.style.display = 'block';
-    contactSection.style.display = 'block';
-    currentlyReadingSection.style.display = 'block';
-    postView.style.display = 'none';
+    // Show all sections, hide post view (with null checks)
+    if (heroSection) heroSection.style.display = 'flex';
+    if (writingSection) writingSection.style.display = 'block';
+    if (contactSection) contactSection.style.display = 'block';
+    if (currentlyReadingSection) currentlyReadingSection.style.display = 'block';
+    if (postView) {
+        postView.classList.add('hidden');
+        postView.style.display = 'none';
+    }
 
     // Clear URL hash
     history.pushState("", document.title, window.location.pathname);
 
     // Scroll to writing section
-    writingSection.scrollIntoView({ behavior: 'smooth' });
+    if (writingSection) {
+        writingSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // Handle browser back/forward

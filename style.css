@@ -262,7 +262,13 @@ main {
 .post-view {
     max-width: 700px;
     margin: 0 auto;
+    padding: 2rem 0;
     animation: fadeIn 0.3s ease-in;
+    min-height: 50vh;
+}
+
+.post-view.hidden {
+    display: none !important;
 }
 
 @keyframes fadeIn {
