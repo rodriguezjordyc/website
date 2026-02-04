@@ -142,13 +142,23 @@ function renderPostsList() {
 
     const html = allPosts.map((post, index) =>
         `<div class="post-item">
-            <a href="#" class="post-link" onclick="showPost(${index}); return false;">
+            <a href="#" class="post-link" data-post-index="${index}">
                 ${post.title}
             </a>
         </div>`
     ).join('');
 
     postsListElement.innerHTML = html;
+
+    // Attach event listeners to all post links
+    const postLinks = postsListElement.querySelectorAll('.post-link');
+    postLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const index = parseInt(link.getAttribute('data-post-index'), 10);
+            showPost(index);
+        });
+    });
 }
 
 // Image Lightbox Management
