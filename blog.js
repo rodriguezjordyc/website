@@ -36,7 +36,6 @@ let allPosts = [];
 const POST_FILES = [
     'aivaluechain.md',
     'Complexity Science in Football.md',
-    'Ed by LAUSD.md',
     'technicalailandscape/Technical AI Landscape 27b79889bbb1815d9432ec68ae21dac5.md'
 ];
 
