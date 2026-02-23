@@ -114,7 +114,9 @@ async function loadPost(filepath) {
 // Load all posts
 async function loadAllPosts() {
     const postsListElement = document.getElementById('posts-list');
-    postsListElement.innerHTML = '<div class="loading">Loading posts...</div>';
+    if (postsListElement) {
+        postsListElement.innerHTML = '<div class="loading">Loading posts...</div>';
+    }
 
     try {
         const posts = await Promise.all(POST_FILES.map(loadPost));
@@ -125,16 +127,24 @@ async function loadAllPosts() {
         // Sort by date (newest first)
         allPosts.sort((a, b) => b.rawDate - a.rawDate);
 
-        renderPostsList();
+        // Only render list if the container exists (it may be removed from the page)
+        if (postsListElement) {
+            renderPostsList();
+        }
     } catch (error) {
         console.error('Error loading posts:', error);
-        postsListElement.innerHTML = '<div class="loading">Failed to load posts.</div>';
+        if (postsListElement) {
+            postsListElement.innerHTML = '<div class="loading">Failed to load posts.</div>';
+        }
     }
 }
 
-// Render the list of posts
+// Render the list of posts (no-op if the container has been removed)
 function renderPostsList() {
     const postsListElement = document.getElementById('posts-list');
+    if (!postsListElement) {
+        return;
+    }
 
     if (allPosts.length === 0) {
         postsListElement.innerHTML = '<div class="loading">No posts available.</div>';
