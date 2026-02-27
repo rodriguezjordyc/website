@@ -7,20 +7,8 @@
     font-display: swap;
 }
 
-/* CSS Variables - Dark Mode (Default) */
+/* CSS Variables - Single Light Theme */
 :root {
-    --bg-primary: #191919;
-    --bg-secondary: #342a29;
-    --text-primary: #E8E4D0;
-    --text-secondary: #b8b396;
-    --text-tertiary: #95917a;
-    --accent: #FFF7D4;
-    --border: #3d3432;
-    --transition: all 0.3s ease;
-}
-
-/* Light Mode */
-[data-theme="light"] {
     --bg-primary: #FCF2D9;
     --bg-secondary: #f0f0ed;
     --text-primary: #1a1918;
@@ -28,6 +16,7 @@
     --text-tertiary: #7a7978;
     --accent: #4a7ba7;
     --border: #e0e0dd;
+    --transition: all 0.3s ease;
 }
 
 /* Base Styles */
@@ -55,54 +44,7 @@ body {
     flex-direction: column;
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    z-index: 1000;
-    background: none;
-    border: none;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 0;
-}
-
-.theme-toggle:hover {
-    opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-    .theme-toggle {
-        top: 1rem;
-        right: 1rem;
-    }
-}
-
-.theme-toggle svg {
-    color: var(--text-primary);
-}
-
-.sun-icon {
-    display: none;
-}
-
-[data-theme="light"] .sun-icon {
-    display: block;
-}
-
-[data-theme="light"] .moon-icon {
-    display: none;
-}
-
-.moon-icon {
-    display: block;
-}
+/* Theme toggle removed – single light theme only */
 
 /* Layout */
 main {
@@ -560,9 +502,8 @@ footer {
     cursor: zoom-in;
 }
 
-/* Smooth transitions for theme switching */
+/* Smooth transitions */
 body,
-.theme-toggle,
 .post-link,
 .email,
 .copy-email-btn,
