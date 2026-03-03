@@ -74,7 +74,7 @@ main {
 }
 
 .hero-name {
-    font-size: clamp(2rem, 5.33vw, 3.33rem);
+    font-size: clamp(1.33rem, 3.55vw, 2.22rem);
     font-weight: 300;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
