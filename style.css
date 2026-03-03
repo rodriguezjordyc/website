@@ -194,6 +194,7 @@ main {
 }
 
 .text-link {
+    color: var(--text-primary);
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: var(--transition);
