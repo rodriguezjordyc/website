@@ -193,6 +193,13 @@ main {
     cursor: pointer;
 }
 
+.text-link {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
 .post-link:hover {
     opacity: 0.8;
 }
