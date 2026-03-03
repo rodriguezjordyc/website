@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Rodriguez</title>
-    <meta name="description" content="personal website">
+    <title>Writing – Jordy Rodriguez</title>
+    <meta name="description" content="Essays and writing by Jordy Rodriguez">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="pics/jr.jpg">
@@ -21,24 +21,18 @@
 </head>
 <body>
     <main>
-        <!-- Hero Section -->
+        <!-- Blog Hero -->
         <section class="hero">
-            <h1 class="hero-name">Jordy Rodriguez</h1>
-            <p class="hero-tagline">Former strategy consultant with interests in AI and education. Somewhere either running, reading, or drinking coffee. Sometimes I like to <a href="blog.html" class="post-link">write</a>.</p>
+            <h1 class="hero-name">Writing</h1>
+            <p class="hero-tagline">Essays and notes by Jordy Rodriguez.</p>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <p class="reach-out">
-                <span class="email">jordy[at]alumni.harvard.edu</span>
-                <button class="copy-email-btn" onclick="copyEmail()" aria-label="Copy email to clipboard">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                </button>
-            </p>
+        <!-- Writing / Posts Table of Contents -->
+        <section class="writing">
+            <h2 class="section-header">Writing</h2>
+            <div id="posts-list" class="posts-list"></div>
         </section>
+
         <!-- Blog Post View (Hidden by default) -->
         <article id="post-view" class="post-view hidden">
             <button class="back-button" onclick="showPostsList()">← Back</button>
@@ -51,3 +45,4 @@
     <script src="blog.js"></script>
 </body>
 </html>
+
