@@ -98,12 +98,12 @@ async function loadPost(filepath) {
     }
 }
 
-// Load all posts
+// Load all posts (only on blog page)
 async function loadAllPosts() {
     const postsListElement = document.getElementById('posts-list');
-    if (postsListElement) {
-        postsListElement.innerHTML = '<div class="loading">Loading posts...</div>';
-    }
+    if (!postsListElement) return;
+
+    postsListElement.innerHTML = '<div class="loading">Loading posts...</div>';
 
     try {
         const posts = await Promise.all(POST_FILES.map(loadPost));
@@ -237,11 +237,8 @@ function showPost(index) {
     }
 
     const postView = document.getElementById('post-view');
-    const writingSection = document.querySelector('.writing');
     const heroSection = document.querySelector('.hero');
     const postContentElement = document.getElementById('post-content');
-    const contactSection = document.querySelector('.contact-section');
-    const currentlyReadingSection = document.querySelector('.currently-reading');
 
     if (!postView || !postContentElement) {
         console.error('Required elements not found');
@@ -305,11 +302,8 @@ function showPost(index) {
             });
         });
 
-        // Show post view, hide other sections (with null checks)
-        if (writingSection) writingSection.style.display = 'none';
+        // Show post view, hide hero (posts list)
         if (heroSection) heroSection.style.display = 'none';
-        if (contactSection) contactSection.style.display = 'none';
-        if (currentlyReadingSection) currentlyReadingSection.style.display = 'none';
         postView.classList.remove('hidden');
         postView.style.display = 'block';
 
@@ -328,28 +322,16 @@ function showPost(index) {
 // Show posts list
 function showPostsList() {
     const postView = document.getElementById('post-view');
-    const writingSection = document.querySelector('.writing');
     const heroSection = document.querySelector('.hero');
-    const contactSection = document.querySelector('.contact-section');
-    const currentlyReadingSection = document.querySelector('.currently-reading');
 
-    // Show all sections, hide post view (with null checks)
     if (heroSection) heroSection.style.display = 'flex';
-    if (writingSection) writingSection.style.display = 'block';
-    if (contactSection) contactSection.style.display = 'block';
-    if (currentlyReadingSection) currentlyReadingSection.style.display = 'block';
     if (postView) {
         postView.classList.add('hidden');
         postView.style.display = 'none';
     }
 
-    // Clear URL hash
     history.pushState("", document.title, window.location.pathname);
-
-    // Scroll to writing section
-    if (writingSection) {
-        writingSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Handle browser back/forward
