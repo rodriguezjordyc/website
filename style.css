@@ -86,7 +86,7 @@ main {
 }
 
 .hero-tagline + .hero-tagline {
-    margin-top: 0.75rem;
+    margin-top: 1rem;
 }
 
 /* Contact Section */
