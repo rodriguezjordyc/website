@@ -10,8 +10,7 @@
     --transition: all 0.3s ease;
 
     /* Typography (edit these to change the site's global font) */
-    --font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        'Liberation Mono', 'Courier New', monospace;
+    --font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
     --font-weight-body: 400;
     --font-weight-hero: 700;
     --letter-spacing-body: 0;

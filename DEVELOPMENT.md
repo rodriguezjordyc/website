@@ -38,7 +38,7 @@ python3 -m http.server 8000
 - Mobile-first responsive design
 
 Typography:
-- Global: Space Mono (Google Fonts), with a heavier weight for the name
+- Global: Libre Baskerville (Google Fonts), with a heavier weight for the name
 
 To change the global font:
 - Update the Google Fonts `<link>` in `index.html`
