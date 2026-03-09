@@ -38,8 +38,7 @@ python3 -m http.server 8000
 - Mobile-first responsive design
 
 Typography:
-- Display: Oswald (Google Fonts) across the site (lighter for body, heavier for name)
-- Body: Work Sans (Google Fonts)
+- Global: Space Mono (Google Fonts), with a heavier weight for the name
 
 ### Behavior
 

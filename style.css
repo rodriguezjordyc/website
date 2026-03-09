@@ -23,12 +23,12 @@ html {
 }
 
 body {
-    font-family: 'Oswald', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.7;
-    letter-spacing: 0.01em;
-    font-weight: 300;
+    letter-spacing: 0;
+    font-weight: 400;
     transition: var(--transition);
     min-height: 100vh;
     display: flex;
@@ -66,10 +66,9 @@ main {
 
 .hero-name {
     font-size: clamp(1.5rem, 4.55vw, 2.5rem);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .hero-tagline {
@@ -189,7 +188,6 @@ main {
 }
 
 .post-content h1 {
-    font-family: 'Oswald', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 400;
     line-height: 1.2;
@@ -199,7 +197,6 @@ main {
 }
 
 .post-content h2 {
-    font-family: 'Oswald', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.75rem;
     font-weight: 400;
     margin-top: 2.5rem;
@@ -210,7 +207,6 @@ main {
 }
 
 .post-content h3 {
-    font-family: 'Oswald', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     margin-top: 2rem;
