@@ -38,7 +38,7 @@ python3 -m http.server 8000
 - Mobile-first responsive design
 
 Typography:
-- Display: Bebas Neue (Google Fonts) for hero name and headings
+- Display: Oswald (Google Fonts) across the site (lighter for body, heavier for name)
 - Body: Work Sans (Google Fonts)
 
 ### Behavior
