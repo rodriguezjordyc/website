@@ -2,12 +2,11 @@
 
 ```
 /
-├── index.html              # Single-page site
-├── style.css               # Dark/light mode styles
-├── blog.js                 # Blog rendering & theme toggle
-├── posts/                  # Markdown blog posts
-├── pics/                   # Profile images
-├── Fonts/                  # Custom Gidole font
-├── PUBLISHING.md           # Publishing workflow guide
-└── CNAME                   # Custom domain
+├── index.html       # Single-page site
+├── style.css        # Styles
+├── main.js          # Copy-to-clipboard behavior
+├── pics/            # Profile images
+├── Fonts/           # Font files
+├── DEVELOPMENT.md   # Development notes
+└── CNAME            # Custom domain
 ```
