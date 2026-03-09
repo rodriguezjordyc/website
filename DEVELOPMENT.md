@@ -40,6 +40,10 @@ python3 -m http.server 8000
 Typography:
 - Global: Space Mono (Google Fonts), with a heavier weight for the name
 
+To change the global font:
+- Update the Google Fonts `<link>` in `index.html`
+- Update `--font-family` in `style.css` under `:root` (single source of truth)
+
 ### Behavior
 
 **Copy Email:**
