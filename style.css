@@ -85,6 +85,10 @@ main {
     letter-spacing: 0.02em;
 }
 
+.hero-tagline + .hero-tagline {
+    margin-top: 0.75rem;
+}
+
 /* Contact Section */
 .contact-section {
     margin-top: 2rem;
