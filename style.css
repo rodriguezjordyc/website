@@ -96,7 +96,7 @@ main {
 }
 
 .reach-out {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-primary);
     display: flex;
     align-items: center;
@@ -122,7 +122,7 @@ main {
 }
 
 .post-link {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-primary);
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -227,7 +227,7 @@ main {
 }
 
 .post-content p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
@@ -384,7 +384,7 @@ footer {
 }
 
 .email {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-primary);
     line-height: 1.8;
     text-decoration: none;
