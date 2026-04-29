@@ -1,15 +1,31 @@
-// Copy Email to Clipboard
-function copyEmail() {
-    const email = 'jordy@alumni.harvard.edu';
-    navigator.clipboard.writeText(email).then(() => {
-        const btn = document.querySelector('.copy-email-btn');
-        if (!btn) return;
-        const originalOpacity = btn.style.opacity;
-        btn.style.opacity = '0.5';
-        setTimeout(() => {
-            btn.style.opacity = originalOpacity;
-        }, 500);
-    }).catch(err => {
-        console.error('Failed to copy email:', err);
+const DEFAULT_EMAIL = 'jordy@alumni.harvard.edu';
+const COPY_FEEDBACK_OPACITY = '0.5';
+const COPY_FEEDBACK_DURATION_MS = 500;
+
+function showCopyFeedback(button) {
+    const originalOpacity = button.style.opacity;
+    button.style.opacity = COPY_FEEDBACK_OPACITY;
+    setTimeout(() => {
+        button.style.opacity = originalOpacity;
+    }, COPY_FEEDBACK_DURATION_MS);
+}
+
+function copyEmail(button) {
+    const email = button.dataset.copyEmail || DEFAULT_EMAIL;
+
+    navigator.clipboard
+        .writeText(email)
+        .then(() => {
+            showCopyFeedback(button);
+        })
+        .catch((error) => {
+            console.error('Failed to copy email:', error);
+        });
+}
+
+const copyEmailButton = document.querySelector('.copy-email-btn');
+if (copyEmailButton) {
+    copyEmailButton.addEventListener('click', () => {
+        copyEmail(copyEmailButton);
     });
 }
