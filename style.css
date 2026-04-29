@@ -101,6 +101,10 @@ main {
     flex-wrap: wrap;
 }
 
+.contact-section a {
+    text-decoration: none;
+}
+
 .text-link {
     color: var(--text-primary);
     transition: var(--transition);
