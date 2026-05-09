@@ -12,6 +12,7 @@
     --font-weight-body: 300;
     --font-weight-hero: 500;
     --letter-spacing-body: 0;
+    --paragraph-gap: 1.5rem;
 }
 
 /* Base Styles */
@@ -73,7 +74,7 @@ main {
     letter-spacing: 0.01em;
 }
 
-.hero-tagline {
+.hero > p {
     font-size: var(--text-size-large);
     color: var(--text-primary);
     max-width: 600px;
@@ -81,8 +82,8 @@ main {
     letter-spacing: 0.02em;
 }
 
-.hero-tagline + .hero-tagline {
-    margin-top: 1rem;
+.hero > p + p {
+    margin-top: var(--paragraph-gap);
 }
 
 /* Contact Section */
