@@ -94,6 +94,8 @@ main {
 
 .reach-out {
     font-size: var(--text-size-large);
+    line-height: var(--line-height-readable);
+    letter-spacing: 0.02em;
     color: var(--text-primary);
     display: flex;
     align-items: center;
@@ -140,9 +142,7 @@ main {
 }
 
 .email {
-    font-size: var(--text-size-large);
     color: var(--text-primary);
-    line-height: var(--line-height-readable);
     text-decoration: none;
     transition: var(--transition);
 }
