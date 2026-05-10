@@ -1,7 +1,7 @@
 /* CSS Variables - Single Light Theme */
 :root {
-    --bg-primary: #faf9f6;
-    --bg-secondary: #f0f0ed;
+    --bg-primary: #EDE9E6;
+    --bg-secondary: #EDE9E6;
     --text-primary: #000000;
     --transition: all 0.3s ease;
     --text-size-large: 1.25rem;
