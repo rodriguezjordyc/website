@@ -11,13 +11,12 @@
     --bg-secondary: #F5F5F5;
     --text-primary: #1B1A17;
     --transition: all 0.3s ease;
-    --text-size-large: 1.25rem;
-    --line-height-readable: 1.8;
-
     /* Typography (edit these to change the site's global font) */
     --font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-    --letter-spacing-body: -0.012em;
-    --letter-spacing-hero: -0.022em;
+    --text-size: 1.25rem;
+    --text-size-name: calc(var(--text-size) * 1.2);
+    --line-height: 1.8;
+    --letter-spacing: -0.012em;
     --paragraph-gap: 1.5rem;
     --hero-name-gap: 2rem;
 }
@@ -36,10 +35,11 @@ html {
 
 body {
     font-family: var(--font-family);
+    font-size: var(--text-size);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    line-height: 1.7;
-    letter-spacing: var(--letter-spacing-body);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
     transition: var(--transition);
     min-height: 100vh;
     display: flex;
@@ -74,17 +74,12 @@ main {
 }
 
 .hero-name {
-    font-size: clamp(1.625rem, 3.25vw, 2.375rem);
-    line-height: 1.15;
+    font-size: var(--text-size-name);
     margin-bottom: var(--hero-name-gap);
-    letter-spacing: var(--letter-spacing-hero);
 }
 
 .hero > p {
-    font-size: var(--text-size-large);
-    color: var(--text-primary);
     max-width: 600px;
-    line-height: var(--line-height-readable);
 }
 
 .hero > p + p {
@@ -98,9 +93,6 @@ main {
 }
 
 .reach-out {
-    font-size: var(--text-size-large);
-    line-height: var(--line-height-readable);
-    color: var(--text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
