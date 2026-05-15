@@ -2,7 +2,7 @@
     font-family: 'SF Pro Text';
     src: url('SF-Pro-Text-Light.otf') format('opentype');
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 /* CSS Variables - Single Light Theme */
