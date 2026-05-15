@@ -1,5 +1,13 @@
 @font-face {
     font-family: 'SF Pro Text';
+    src: url('SF-Pro-Text-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
     src: url('SF-Pro-Text-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
@@ -17,9 +25,10 @@
 
     /* Typography (edit these to change the site's global font) */
     --font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-weight-body: 400;
-    --font-weight-hero: 500;
-    --letter-spacing-body: 0;
+    --font-weight-body: 300;
+    --font-weight-hero: 400;
+    --letter-spacing-body: -0.012em;
+    --letter-spacing-hero: -0.008em;
     --paragraph-gap: 1.5rem;
 }
 
@@ -79,7 +88,7 @@ main {
     font-size: clamp(1.75rem, 4.55vw, 3rem);
     font-weight: var(--font-weight-hero);
     margin-bottom: 1rem;
-    letter-spacing: 0.01em;
+    letter-spacing: var(--letter-spacing-hero);
 }
 
 .hero > p {
@@ -87,7 +96,6 @@ main {
     color: var(--text-primary);
     max-width: 600px;
     line-height: var(--line-height-readable);
-    letter-spacing: 0.02em;
 }
 
 .hero > p + p {
@@ -103,7 +111,6 @@ main {
 .reach-out {
     font-size: var(--text-size-large);
     line-height: var(--line-height-readable);
-    letter-spacing: 0.02em;
     color: var(--text-primary);
     display: flex;
     align-items: center;
