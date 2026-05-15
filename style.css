@@ -1,13 +1,6 @@
 @font-face {
-    font-family: 'SF Pro Text Light';
+    font-family: 'SF Pro Text';
     src: url('SF-Pro-Text-Light.otf') format('opentype');
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SF Pro Text Regular';
-    src: url('SF-Pro-Text-Regular.otf') format('opentype');
     font-style: normal;
     font-display: swap;
 }
@@ -22,8 +15,7 @@
     --line-height-readable: 1.8;
 
     /* Typography (edit these to change the site's global font) */
-    --font-family-body: 'SF Pro Text Light', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-family-hero: 'SF Pro Text Regular', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
     --letter-spacing-body: -0.012em;
     --letter-spacing-hero: -0.022em;
     --paragraph-gap: 1.5rem;
@@ -43,7 +35,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family-body);
+    font-family: var(--font-family);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.7;
@@ -82,7 +74,6 @@ main {
 }
 
 .hero-name {
-    font-family: var(--font-family-hero);
     font-size: clamp(1.625rem, 3.25vw, 2.375rem);
     line-height: 1.15;
     margin-bottom: var(--hero-name-gap);
