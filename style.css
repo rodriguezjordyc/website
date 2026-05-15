@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('SF-Pro-Text-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* CSS Variables - Single Light Theme */
 :root {
     --bg-primary: #F5F5F5;
@@ -8,8 +16,8 @@
     --line-height-readable: 1.8;
 
     /* Typography (edit these to change the site's global font) */
-    --font-family: 'Source Serif 4', serif;
-    --font-weight-body: 300;
+    --font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-weight-body: 400;
     --font-weight-hero: 500;
     --letter-spacing-body: 0;
     --paragraph-gap: 1.5rem;
