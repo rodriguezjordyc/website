@@ -14,7 +14,7 @@
     /* Typography (edit these to change the site's global font) */
     --font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
     --text-size: 1.25rem;
-    --text-size-name: calc(var(--text-size) * 1.2);
+    --text-size-name: calc(var(--text-size) * 1.5);
     --line-height: 1.8;
     --letter-spacing: -0.012em;
     --paragraph-gap: 1.5rem;
