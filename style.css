@@ -28,7 +28,7 @@
     --font-weight-body: 300;
     --font-weight-hero: 400;
     --letter-spacing-body: -0.012em;
-    --letter-spacing-hero: -0.008em;
+    --letter-spacing-hero: -0.022em;
     --paragraph-gap: 1.5rem;
 }
 
@@ -85,8 +85,9 @@ main {
 }
 
 .hero-name {
-    font-size: clamp(1.75rem, 4.55vw, 3rem);
+    font-size: clamp(1.625rem, 3.25vw, 2.375rem);
     font-weight: var(--font-weight-hero);
+    line-height: 1.15;
     margin-bottom: 1rem;
     letter-spacing: var(--letter-spacing-hero);
 }
