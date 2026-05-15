@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'SF Pro Text';
     src: url('SF-Pro-Text-Light.otf') format('opentype');
+    font-display: swap;
 }
 
 /* CSS Variables - Single Light Theme */
@@ -104,13 +105,10 @@ main {
 
 .text-link {
     color: var(--text-primary);
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.text-link {
     text-decoration: underline;
     text-underline-offset: 2px;
+    transition: var(--transition);
+    cursor: pointer;
 }
 
 .copy-email-btn {
