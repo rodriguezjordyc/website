@@ -30,6 +30,7 @@
     --letter-spacing-body: -0.012em;
     --letter-spacing-hero: -0.022em;
     --paragraph-gap: 1.5rem;
+    --hero-name-gap: 2rem;
 }
 
 /* Base Styles */
@@ -88,7 +89,7 @@ main {
     font-size: clamp(1.625rem, 3.25vw, 2.375rem);
     font-weight: var(--font-weight-hero);
     line-height: 1.15;
-    margin-bottom: 1rem;
+    margin-bottom: var(--hero-name-gap);
     letter-spacing: var(--letter-spacing-hero);
 }
 
