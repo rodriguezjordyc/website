@@ -5,11 +5,11 @@
     --text-primary: #1B1A17;
     --transition: all 0.3s ease;
     /* Typography (edit these to change the site's global font) */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --text-size: 1.25rem;
+    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --text-size: 1.15rem;
     --text-size-name: calc(var(--text-size) * 1.5);
-    --line-height: 1.8;
-    --letter-spacing: -0.012em;
+    --line-height: 1.7;
+    --letter-spacing: -0.006em;
     --paragraph-gap: 1.5rem;
     --hero-name-gap: 2rem;
 }
@@ -68,6 +68,8 @@ main {
 
 .hero-name {
     font-size: var(--text-size-name);
+    font-weight: 500;
+    letter-spacing: -0.02em;
     margin-bottom: var(--hero-name-gap);
 }
 
