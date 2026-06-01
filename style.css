@@ -9,7 +9,9 @@
     --text-size: 1.3rem;
     --text-size-name: calc(var(--text-size) * 1.5);
     --line-height: 1.7;
-    --letter-spacing: -0.006em;
+    --font-weight-body: 300;
+    --font-weight-heading: 400;
+    --letter-spacing: 0;
     --paragraph-gap: 1.5rem;
     --hero-name-gap: 2rem;
 }
@@ -29,10 +31,12 @@ html {
 body {
     font-family: var(--font-family);
     font-size: var(--text-size);
+    font-weight: var(--font-weight-body);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
+    -webkit-font-smoothing: antialiased;
     transition: var(--transition);
     min-height: 100vh;
     display: flex;
@@ -68,8 +72,8 @@ main {
 
 .hero-name {
     font-size: var(--text-size-name);
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-weight: var(--font-weight-heading);
+    letter-spacing: -0.01em;
     margin-bottom: var(--hero-name-gap);
 }
 
