@@ -1,8 +1,6 @@
 :root {
     --bg-primary: #f7f6f2;
     --text-primary: #161513;
-    --link-color: #1f5fbf;
-    --link-hover: #174a95;
     --transition: color 0.2s ease, opacity 0.2s ease;
     --font-family: "Lora", Georgia, "Times New Roman", serif;
     --text-size: 1.16rem;
@@ -94,7 +92,7 @@ main {
 }
 
 .text-link {
-    color: var(--link-color);
+    color: inherit;
     cursor: pointer;
     text-decoration: underline;
     text-decoration-thickness: 0.06em;
@@ -104,7 +102,8 @@ main {
 
 .text-link:hover,
 .text-link:focus-visible {
-    color: var(--link-hover);
+    color: inherit;
+    opacity: 0.72;
 }
 
 .text-link:focus-visible {
