@@ -3,8 +3,8 @@
     --text-primary: #161513;
     --transition: color 0.2s ease, opacity 0.2s ease;
     --font-family: "Lora", Georgia, "Times New Roman", serif;
-    --text-size: 1.16rem;
-    --text-size-name: 1.82rem;
+    --text-size: 1.22rem;
+    --text-size-name: 1.92rem;
     --line-height: 1.5;
     --font-weight-body: 400;
     --font-weight-heading: 500;
@@ -136,8 +136,8 @@ main {
 
 @media (max-width: 768px) {
     :root {
-        --text-size: 1rem;
-        --text-size-name: 1.54rem;
+        --text-size: 1.05rem;
+        --text-size-name: 1.62rem;
         --line-height: 1.52;
         --paragraph-gap: 1.45rem;
         --section-gap: 1.7rem;
@@ -165,8 +165,8 @@ main {
 
 @media (max-width: 390px) {
     :root {
-        --text-size: 0.96rem;
-        --text-size-name: 1.45rem;
+        --text-size: 1rem;
+        --text-size-name: 1.52rem;
     }
 
     main {
