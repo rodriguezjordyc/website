@@ -73,7 +73,6 @@ async function runTypewriter(root) {
         await renderNode(node, root, cursor);
     }
 
-    cursor.remove();
     root.removeAttribute('aria-busy');
 }
 
