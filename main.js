@@ -66,7 +66,7 @@ async function runTypewriter(root) {
     const cursor = createCursor();
 
     root.textContent = '';
-    root.setAttribute('aria-live', 'polite');
+    root.setAttribute('aria-busy', 'true');
     root.appendChild(cursor);
 
     for (const node of originalNodes) {
@@ -74,7 +74,7 @@ async function runTypewriter(root) {
     }
 
     cursor.remove();
-    root.removeAttribute('aria-live');
+    root.removeAttribute('aria-busy');
 }
 
 if (typewriterRoot && !prefersReducedMotion) {
