@@ -9,38 +9,29 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <main>
-            <!-- Hero Section -->
-            <section class="hero">
+        <main data-typewriter>
+            <section class="hero" aria-label="About Jordy Rodriguez">
                 <h1 class="hero-name">Jordy Rodriguez</h1>
-                <p>
-                    Currently focused on understanding ops challenges in public education. 
-                </p>
-                <p>
-                    These efforts are shaped by my experience attending public schools, strategy consulting background, and technology-oriented political science coursework at Harvard. 
-                </p>
-                <p>
-                    I sometimes write <a href="https://jordyrodriguez.substack.com/" class="text-link">here</a>.
-                </p>
+                <p class="intro-line">A few highlights about me:</p>
+                <ul class="highlights-list">
+                    <li>Studied Government at Harvard, focusing on how technology can better serve society</li>
+                    <li>Worked in technology consulting across the Americas, helping clients uncover and pursue growth opportunities</li>
+                    <li>Most recently, I use my data and analytical training to help teams turn insights into action</li>
+                </ul>
+                <p class="closing-line">I enjoy the occasional run and a good drip coffee. I sometimes share my thoughts / personal projects on <a href="https://jordyrodriguez.substack.com/" class="text-link">Substack</a> or <a href="https://github.com/rodriguezjordyc" class="text-link">GitHub</a>.</p>
             </section>
 
-            <!-- Contact Section -->
-            <section class="contact-section">
-                <p class="reach-out">
-                    <a href="https://github.com/rodriguezjordyc" class="text-link">github</a>
-                    <span aria-hidden="true">|</span>
-                    <span class="email">jordy[at]alumni.harvard.edu</span>
-                </p>
+            <section class="contact-section" aria-label="Contact">
+                <p class="reach-out"><span class="email">jordy[at]alumni.harvard.edu</span></p>
             </section>
         </main>
 
-        <!-- Scripts -->
         <script src="main.js"></script>
     </body>
 </html>
