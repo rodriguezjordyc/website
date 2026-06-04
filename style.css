@@ -5,13 +5,14 @@
     --link-hover: #174a95;
     --transition: color 0.2s ease, opacity 0.2s ease;
     --font-family: "Lora", Georgia, "Times New Roman", serif;
-    --text-size: 1.28rem;
-    --text-size-name: 2rem;
-    --line-height: 1.52;
+    --text-size: 1.16rem;
+    --text-size-name: 1.82rem;
+    --line-height: 1.5;
     --font-weight-body: 400;
     --font-weight-heading: 500;
-    --paragraph-gap: 1.85rem;
-    --section-gap: 2.35rem;
+    --paragraph-gap: 1.65rem;
+    --section-gap: 2rem;
+    --content-width: 660px;
 }
 
 * {
@@ -27,6 +28,7 @@ html {
 
 body {
     min-height: 100vh;
+    min-height: 100svh;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-family);
@@ -39,9 +41,9 @@ body {
 }
 
 main {
-    width: min(88vw, 760px);
+    width: min(86vw, var(--content-width));
     margin: 0 auto;
-    padding: 5.5rem 0 4rem;
+    padding: clamp(3.5rem, 8vh, 5.25rem) 0 3.5rem;
 }
 
 .hero {
@@ -59,22 +61,22 @@ main {
 }
 
 .intro-line {
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.15rem;
 }
 
 .highlights-list {
     display: grid;
-    gap: 0.45rem;
-    margin: 0 0 var(--paragraph-gap) 1.8rem;
-    padding-left: 1rem;
+    gap: 0.38rem;
+    margin: 0 0 var(--paragraph-gap) 1.35rem;
+    padding-left: 0.95rem;
 }
 
 .highlights-list li {
-    padding-left: 0.35rem;
+    padding-left: 0.28rem;
 }
 
 .closing-line {
-    margin-top: 0.25rem;
+    margin-top: 0.2rem;
 }
 
 .contact-section {
@@ -87,6 +89,7 @@ main {
 
 .email {
     color: var(--text-primary);
+    white-space: nowrap;
 }
 
 .text-link {
@@ -132,21 +135,45 @@ main {
 
 @media (max-width: 768px) {
     :root {
-        --text-size: 1.08rem;
-        --text-size-name: 1.72rem;
-        --line-height: 1.55;
-        --paragraph-gap: 1.6rem;
-        --section-gap: 2rem;
+        --text-size: 1rem;
+        --text-size-name: 1.54rem;
+        --line-height: 1.52;
+        --paragraph-gap: 1.45rem;
+        --section-gap: 1.7rem;
     }
 
     main {
-        width: min(90vw, 760px);
-        padding: 3.5rem 0 3rem;
+        width: min(91vw, var(--content-width));
+        padding: clamp(2.75rem, 8svh, 4rem) 0 2.75rem;
+    }
+
+    .intro-line {
+        margin-bottom: 1rem;
     }
 
     .highlights-list {
-        margin-left: 1.25rem;
-        padding-left: 0.8rem;
+        gap: 0.32rem;
+        margin-left: 1.05rem;
+        padding-left: 0.75rem;
+    }
+
+    .highlights-list li {
+        padding-left: 0.15rem;
+    }
+}
+
+@media (max-width: 390px) {
+    :root {
+        --text-size: 0.96rem;
+        --text-size-name: 1.45rem;
+    }
+
+    main {
+        width: 90vw;
+    }
+
+    .email {
+        white-space: normal;
     }
 }
 
